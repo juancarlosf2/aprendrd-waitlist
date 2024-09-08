@@ -1,9 +1,6 @@
 "use client";
 
-import type { CardProps } from "@nextui-org/react";
-
 import React from "react";
-import { Card, CardBody, Image, CardHeader } from "@nextui-org/react";
 import {
   m,
   useMotionValue,
@@ -12,6 +9,7 @@ import {
   useMotionTemplate,
 } from "framer-motion";
 import { cn } from "@nextui-org/theme";
+import { CardProps } from "@nextui-org/card";
 
 export default function Spotlight({ children, ...props }: CardProps) {
   let mouseX = useMotionValue(0);
@@ -39,7 +37,6 @@ export default function Spotlight({ children, ...props }: CardProps) {
         "group relative w-[420px] bg-inherit shadow-large",
         props.className
       )}
-      radius="lg"
       onMouseMove={onMouseMove}
     >
       <LazyMotion features={domAnimation}>
